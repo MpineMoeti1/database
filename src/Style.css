@@ -1,0 +1,369 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.header .navigation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .logout-button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header .logout-button:hover {
+    background-color: #e84343;
+}
+
+/* Form Styles */
+.product-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.product-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Navigation Styles */
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Table Styles */
+.product-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Button Styles */
+.edit {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit:hover {
+    background-color: #e0a800;
+}
+
+.sell {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sell:hover {
+    background-color: #218838;
+}
+
+.delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete:hover {
+    background-color: #c82333;
+}
+
+/* Authentication Styles */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.auth-box {
+    width: 300px;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auth-box h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-button:hover {
+    background-color: #333;
+}
+
+.auth-box p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.toggle-link {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0.2rem;
+}
+
+.toggle-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-form button {
+        width: 100%;
+    }
+
+    .product-table th, .product-table td {
+        padding: 8px;
+    }
+}
+
+
+
+
+
+
+
+/* User Management Styles */
+.user-management {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-management h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.user-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-form button:hover {
+    background-color: #0056b3;
+}
+
+/* User Table Styles */
+.user-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Action Buttons in User Table */
+.user-table .edit-user, .user-table .delete-user {
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-table .edit-user {
+    background-color: #ffc107;
+}
+
+.user-table .edit-user:hover {
+    background-color: #e0a800;
+}
+
+.user-table .delete-user {
+    background-color: #dc3545;
+}
+
+.user-table .delete-user:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Styles for User Management */
+@media (max-width: 600px) {
+    .user-management {
+        padding: 10px;
+    }
+
+    .user-form {
+        max-width: 100%;
+    }
+
+    .user-table th, .user-table td {
+        padding: 8px;
+    }
+}

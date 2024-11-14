@@ -1,0 +1,315 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f4f4f9; /* Light background color for the body */
+  color: #333; /* General text color */
+  line-height: 1.6;
+  font-size: 16px; /* Base font size */
+}
+
+/* Navigation Bar */
+.navigation {
+  position: relative;
+  overflow: hidden; /* Hide overflowing content */
+  padding: 20px 40px; /* Padding for the navigation bar */
+  background: linear-gradient(45deg, #6a8d92, #35424a); /* Gradient background */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.navigation::before {
+  content: '';
+  position: absolute;
+  top: -60%; /* Adjust to create a zig-zag effect above */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* Use the same background as the navigation bar */
+  clip-path: polygon(0 100%, 25% 80%, 50% 100%, 75% 80%, 100% 100%, 100% 0, 0 0);
+  z-index: -1; /* Place it behind the nav content */
+}
+
+.navigation .logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 3px solid white;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #35424a; /* Background color for logo */
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.navigation li {
+  margin: 0 15px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.navigation a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+  color: #ffeb3b; /* Golden color on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+.navigation .logout-button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation .logout-button:hover {
+  background-color: #f44336; /* Change color on hover */
+  transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+/* Form Styles */
+form {
+  max-width: 800px;
+  margin: 30px auto; /* Center the form */
+  padding: 20px;
+  background-color: #6a0dad; /* Updated to purple background color */
+  border-radius: 8px; /* Rounded corners for form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+form input {
+  width: 100%; /* Full width input */
+  padding: 12px;
+  margin-bottom: 15px; /* Spacing below inputs */
+  border-radius: 5px; /* Rounded corners for inputs */
+  border: 1px solid #ccc; /* Light border */
+  font-size: 16px; /* Font size for inputs */
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus */
+}
+
+form input:focus {
+  border-color: #35424a; /* Border color on focus */
+  outline: none; /* Remove outline */
+  box-shadow: 0 0 5px rgba(53, 66, 74, 0.5); /* Shadow on focus */
+}
+
+form button {
+  width: 100%; /* Full width button */
+  padding: 12px; /* Padding for button */
+  background-color: #6a8d92; /* Updated background color matching the navigation bar */
+  color: white; /* Text color for button */
+  border: none; /* Remove border */
+  font-size: 18px; /* Font size for button */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Cursor change on hover */
+  transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+form button:hover {
+  background-color: #5e7a87; /* Darker shade on hover matching navigation hover color */
+}
+
+/* Table Styles */
+table {
+  width: 80%;
+  margin: 20px auto; /* Center the table */
+  border-collapse: separate; /* Allow for rounded corners */
+  border-spacing: 0; /* Remove default spacing between borders */
+  border-radius: 15px; /* Rounded corners for the table */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow effect for depth */
+  background-color: #6a0dad; /* Purple background color */
+}
+
+th, td {
+  padding: 12px 15px; /* Padding for cells */
+  border: 1px solid transparent; /* Transparent borders for rounded effects */
+  text-align: left; /* Text alignment */
+  color: white; /* Text color for readability */
+}
+
+th {
+  background-color: #4CAF50; /* Darker shade for the header */
+  color: white; /* White text for header */
+  border-top-left-radius: 15px; /* Rounded corner for top left */
+  border-top-right-radius: 15px; /* Rounded corner for top right */
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.1); /* Lightened background for data cells */
+}
+
+tr:hover td {
+  background-color: rgba(255, 255, 255, 0.2); /* Highlight background for hover effect */
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05); /* Slightly darker even rows */
+}
+
+tr:last-child td {
+  border-bottom-left-radius: 15px; /* Rounded corner for bottom left */
+  border-bottom-right-radius: 15px; /* Rounded corner for bottom right */
+}
+
+/* Updated Button styles within the table */
+table button {
+  background-color: #35424a; /* Updated button background color matching the navigation bar */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 6px 12px; /* Padding for buttons */
+  font-size: 14px; /* Font size for buttons */
+  border-radius: 5px; /* Button rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+/* Button hover effect */
+table button:hover {
+  background-color: #4CAF50; /* Updated button color change on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Error message styles */
+.error {
+  color: #f44336; /* Error text color */
+  font-size: 14px; /* Font size for error messages */
+  margin: 10px 0; /* Spacing above and below error messages */
+  font-weight: bold; /* Bold text for error messages */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navigation ul {
+      flex-direction: column; /* Stack nav items in column */
+      align-items: center; /* Center nav items */
+      padding: 0; /* Remove padding */
+  }
+
+  .navigation li {
+      margin: 10px 0; /* Margin spacing for nav items */
+  }
+
+  .form-container {
+      padding: 15px; /* Padding adjustments for forms */
+  }
+
+  .table-container {
+      padding: 15px; /* Padding adjustments for tables */
+  }
+}
+
+/* App Logo */
+.app-logo {
+  width: 120px; /* Logo width */
+  margin: 20px auto; /* Centering */
+  display: block; /* Block display */
+  position: relative; /* Position relative for animation */
+  animation: slideSideways 3s ease-in-out infinite alternate; /* Animation */
+}
+
+/* Sideways slide animation */
+@keyframes slideSideways {
+  0% {
+      transform: translateX(0); /* Start position */
+  }
+  100% {
+      transform: translateX(30px); /* Slide effect */
+  }
+}
+
+/* General container for the app */
+.app-container {
+  position: relative; /* Position context */
+  padding: 20px; /* Padding */
+  min-height: 100vh; /* Minimum height for full view */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: white; /* Ensure text is visible on varied backgrounds */
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex; /* Flex display for navbar */
+  justify-content: space-around; /* Space items equally */
+  align-items: center; /* Center vertically */
+  background-color: #333; /* Background color for navbar */
+  padding: 15px 0; /* Padding for navbar */
+  position: sticky; /* Fixed position for navbar */
+  top: 0; /* Sticky at the top */
+  z-index: 1000; /* Ensure it is above other content */
+}
+
+.nav-link {
+  display: flex; /* Flex display for links */
+  align-items: center; /* Center items within links */
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* White text color */
+  font-size: 1.2em; /* Font size */
+  padding: 5px 10px; /* Padding for links */
+  transition: color 0.3s ease; /* Transition for color change */
+}
+
+.nav-link:hover {
+  color: #e63946; /* Color change on hover */
+}
+
+.nav-icon {
+  margin-right: 8px; /* Spacing between icon and text */
+  font-size: 1.3em; /* Icon size */
+}
+
+/* Center the entire form container */
+.form-container {
+  display: flex; /* Flex display for form container */
+  flex-direction: column; /* Column layout */
+  align-items: center; /* Center contents */
+  justify-content: center; /* Center contents vertically */
+  min-height: 100vh; /* Minimum height for full view */
+}
+
+/* Center the heading */
+.form-container h2 {
+  text-align: center; /* Center align headings */
+  margin-bottom: 20px; /* Spacing below headings */
+}
+
+/* Message section below the form */
+.form-messages {
+  text-align: center; /* Center align messages */
+}
+
+.app-logo {
+  max-width: 200px; /* Maximum width for logo */
+  margin: 20px; /* Spacing for logo */
+}
